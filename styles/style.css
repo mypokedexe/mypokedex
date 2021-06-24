@@ -340,3 +340,29 @@ template {
 [hidden] {
   display: none;
 }
+
+body {
+  font-family: "Roboto", sans-serif;
+  background: #F4F4F4;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 28px 1rem 0 1rem;
+}
+header .logo__pokeball {
+  width: 72px;
+  height: 84px;
+}
+header .logo__text {
+  width: 161px;
+  height: 36px;
+}

@@ -1,2 +1,22 @@
 @import "../resources-sass/normalize";
 @import "../resources-sass/variables";
+body{
+    font-family:'Roboto',sans-serif;
+    background:$color-three;
+}
+header{
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding:28px 1rem 0 1rem;
+    }
+    .logo__pokeball{
+        width: 72px;
+        height: 84px;
+    }
+    .logo__text{
+        width: 161px;
+        height: 36px;
+    }
+}
