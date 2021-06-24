@@ -109,3 +109,53 @@ main{
         align-items: center;
     }
 }
+@media screen and (min-width:500px){
+    header{
+        .logo{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            padding:20px 0 0 0 ;
+        }
+        .logo__pokeball{
+            margin:0 2rem 0 0;
+        }
+    }
+    .search{
+        display:flex;
+        justify-content: center;
+        .search__input{
+            width: 200px;
+            height: 30px;
+            margin:0 3rem;
+        }
+        ::placeholder{
+            font-size:1rem;
+        }
+    }
+    main{
+        grid-template-columns: repeat(3,auto);
+        .pokemon__box{
+            height: 150px;
+            width: 125px;
+            .pokemon__image{
+                width: 80px;
+                height: 80px;
+            }
+        }
+        .pokemon{
+            padding-bottom: 10px;
+        }
+        .pokemon__name__box{
+            font-size:1rem;
+            height:20px ;
+        }
+        .pokemon__description{
+            height: 20px;
+            font-size:1rem;
+            align-items: center;
+            justify-content: space-between;
+            padding:0 10px;
+        }
+    }
+}
