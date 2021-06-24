@@ -353,9 +353,9 @@ header .logo {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 28px 1rem 0 1rem;
 }
 header .logo__pokeball {
@@ -365,4 +365,154 @@ header .logo__pokeball {
 header .logo__text {
   width: 161px;
   height: 36px;
+  margin: 0 0 0 1rem;
+}
+
+.search {
+  padding: 14px 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.search .search__input {
+  height: 24px;
+  width: 157px;
+  border-radius: 20px;
+  text-align: center;
+  border: none;
+  background: #E9E9E9;
+}
+.search .arrow {
+  font-size: 25px;
+  cursor: pointer;
+}
+.search ::-webkit-input-placeholder {
+  font-weight: 500;
+  font-size: 10px;
+  color: #7D7D7D;
+}
+.search ::-moz-placeholder {
+  font-weight: 500;
+  font-size: 10px;
+  color: #7D7D7D;
+}
+.search :-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 10px;
+  color: #7D7D7D;
+}
+.search ::-ms-input-placeholder {
+  font-weight: 500;
+  font-size: 10px;
+  color: #7D7D7D;
+}
+.search ::placeholder {
+  font-weight: 500;
+  font-size: 10px;
+  color: #7D7D7D;
+}
+
+main {
+  padding: 20px 1rem 0 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 112px 24px 112px;
+  grid-template-columns: repeat(2, 112px);
+  grid-gap: 24px;
+}
+main .pokemon__box {
+  height: 118px;
+  width: 112px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .pokemon__box .pokemon__image {
+  width: 53px;
+  height: 63px;
+  position: absolute;
+  top: 0;
+  z-index: 300;
+}
+main .pokemon {
+  background: -webkit-gradient(linear, right top, left bottom, from(#FF56AF), to(#FF96CD));
+  background: linear-gradient(to left bottom, #FF56AF, #FF96CD);
+  border-radius: 15px;
+  padding: 0 1rem 5px 1rem;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+main .pokemon__name__box {
+  background: #FFFF;
+  height: 16px;
+  font-weight: 500;
+  font-size: 10px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .pokemon__description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #FFFF;
+  font-weight: 500;
+  font-size: 10px;
+  padding: 0 1rem;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 5px;
+  margin: 6px 0 0 0;
+  height: 15px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+main .pokemon__description__number__box, main .pokemon__description__type__box {
+  height: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
