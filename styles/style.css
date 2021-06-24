@@ -486,6 +486,11 @@ main .pokemon__name__box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 0 0 5px;
+}
+main .pokemon__name__box .pokemon__name {
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 main .pokemon__description {
   display: -webkit-box;
@@ -515,6 +520,11 @@ main .pokemon__description__number__box, main .pokemon__description__type__box {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+main .pokemon__description__number, main .pokemon__description__type {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 25px;
 }
 
 @media screen and (min-width: 500px) {
@@ -592,6 +602,11 @@ main .pokemon__description__number__box, main .pokemon__description__type__box {
         -ms-flex-pack: justify;
             justify-content: space-between;
     padding: 0 10px;
+  }
+  main .pokemon__description__number, main .pokemon__description__type {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 40px;
   }
 }
 @media screen and (min-width: 1000px) {
