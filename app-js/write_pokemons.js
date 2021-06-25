@@ -1,5 +1,5 @@
 export const WritePokemons = (dataPokemon )=>{
-    let {imagePokemon} = dataPokemon
+    let {imagePokemon,namePokemon,numberPokemon,typePokemon} = dataPokemon
     
     // CONSTANT CREATE
     const $main = document.querySelector('main')
@@ -29,6 +29,13 @@ export const WritePokemons = (dataPokemon )=>{
     $pokemonDescriptionType.classList.add('pokemon__desctipiont__type')
     $pokemonClick.classList.add('pokemon__click')
 
+    // VARIABLE FILL
+    $pokemonImage.src = imagePokemon
+    $pokemonImage.alt = namePokemon
+    $pokemonName.textContent = namePokemon
+    $pokemonDescriptionNumber.textContent = numberPokemon
+    $pokemonDescriptionType.textContent = typePokemon
+    $pokemonClick.dataset.pokemon = namePokemon
     //  VARIABLE ENCAPSULATION
     $pokemonBox.appendChild($pokemonImage)
     $pokemonBox.appendChild($pokemon)
