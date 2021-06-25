@@ -15,4 +15,17 @@ export const WritePokemons = (dataPokemon )=>{
     const $pokemonDescriptionTypeBox = document.createElement('div')
     const $pokemonDescriptionType = document.createElement('p')
     const $pokemonClick = document.createElement('section')
+
+    // CSS CLASS ASSIGNMENT
+    $pokemonBox.classList.add('pokemon__box')
+    $pokemonImage.classList.add('pokemon__image')
+    $pokemon.classList.add('pokemon')
+    $pokemonNameBox.classList.add('pokemon__name__box')
+    $pokemonName.classList.add('pokemon__name')
+    $pokemonDescription.classList.add('pokemon__description')
+    $pokemonDescriptionNumberBox.classList.add('pokemon__description__number__box')
+    $pokemonDescriptionNumber.classList.add('pokemon__description__number')
+    $pokemonDescriptionTypeBox.classList.add('pokemon__description__type__box')
+    $pokemonDescriptionType.classList.add('pokemon__desctipiont__type')
+    $pokemonClick.classList.add('pokemon__click')
 }
