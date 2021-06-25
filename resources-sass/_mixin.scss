@@ -33,7 +33,7 @@
             position: absolute;
             top:170px;
             animation-name:scale-shadow;
-            animation-duration: 2s;
+            animation-duration: 2.2s;
             position: absolute;
             animation-iteration-count: infinite;
         }
@@ -120,4 +120,16 @@
     .pokemon__box__active__enabled{
         display:none;
     }
+    @media screen and (min-width:500px){
+        .pokemon__active{
+            .pokemon__list__desctiption__item__title{
+                font-size:20px;
+                padding:0 0 7px 0;
+            }
+            .pokemon__list__desctiption__item__description{
+                font-size:16px;
+            }
+        }
+    }
+    
 }

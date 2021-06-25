@@ -442,7 +442,6 @@ main .pokemon__box {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: red;
 }
 main .pokemon__box .pokemon__image {
   width: 53px;
@@ -717,8 +716,8 @@ main .pokemon__click {
   top: 170px;
   -webkit-animation-name: scale-shadow;
           animation-name: scale-shadow;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 2.2s;
+          animation-duration: 2.2s;
   position: absolute;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
@@ -849,4 +848,14 @@ main .pokemon__click {
 
 .pokemon__box__active__enabled {
   display: none;
+}
+
+@media screen and (min-width: 500px) {
+  .pokemon__active .pokemon__list__desctiption__item__title {
+    font-size: 20px;
+    padding: 0 0 7px 0;
+  }
+  .pokemon__active .pokemon__list__desctiption__item__description {
+    font-size: 16px;
+  }
 }
