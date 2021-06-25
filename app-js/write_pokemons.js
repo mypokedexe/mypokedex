@@ -28,4 +28,17 @@ export const WritePokemons = (dataPokemon )=>{
     $pokemonDescriptionTypeBox.classList.add('pokemon__description__type__box')
     $pokemonDescriptionType.classList.add('pokemon__desctipiont__type')
     $pokemonClick.classList.add('pokemon__click')
+
+    //  VARIABLE ENCAPSULATION
+    $pokemonBox.appendChild($pokemonImage)
+    $pokemonBox.appendChild($pokemon)
+    $pokemon.appendChild($pokemonNameBox)
+    $pokemonNameBox.appendChild($pokemonName)
+    $pokemon.appendChild($pokemonDescription)
+    $pokemonDescription.appendChild($pokemonDescriptionNumberBox)
+    $pokemonDescriptionNumberBox.appendChild($pokemonDescriptionNumber)
+    $pokemonDescription.appendChild($pokemonDescriptionTypeBox)
+    $pokemonDescriptionTypeBox.appendChild($pokemonDescriptionType)
+    $pokemonBox.appendChild($pokemonClick)
+    
 }
