@@ -131,5 +131,48 @@
             }
         }
     }
-    
+    @media screen and  (min-width:1000px){
+        .pokemon__box__active{
+            left:1rem;
+            right: 1rem;
+            .pokemon__image__active{
+                width: 241px;
+                height: 225px;
+            }
+            .shadow__image{
+                top:40%;
+                width: 146x;
+            }
+        }
+        .pokemon__active{
+            display:flex;
+            flex-direction:column;
+            align-items: center;
+            .pokemon__list__description{
+                grid-template-columns: repeat(3,85px);
+                width: 937px;
+            }
+            .pokemon__list__description__item{
+                &:nth-child(7){
+                    grid-column:3/4;
+                    grid-row:2/4;
+                }
+                &:nth-child(3){
+                    grid-column:1/2;
+                    grid-row:2/3;
+                }
+                &:nth-child(4){
+                    grid-column:2/3;
+                    grid-row:2/3;
+                }
+                &:nth-child(5){
+                    // grid-column:3/4;
+                    grid-row:3/4;
+                }
+                .pokemon__type{
+                    grid-template-columns:repeat(1,auto);
+                }
+            }
+        }
+    }
 }
