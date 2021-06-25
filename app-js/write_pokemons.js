@@ -36,6 +36,7 @@ export const WritePokemons = (dataPokemon )=>{
     $pokemonDescriptionNumber.textContent = numberPokemon
     $pokemonDescriptionType.textContent = typePokemon
     $pokemonClick.dataset.pokemon = namePokemon
+
     //  VARIABLE ENCAPSULATION
     $pokemonBox.appendChild($pokemonImage)
     $pokemonBox.appendChild($pokemon)
@@ -47,5 +48,6 @@ export const WritePokemons = (dataPokemon )=>{
     $pokemonDescription.appendChild($pokemonDescriptionTypeBox)
     $pokemonDescriptionTypeBox.appendChild($pokemonDescriptionType)
     $pokemonBox.appendChild($pokemonClick)
-    
+    Fragment.appendChild($pokemonBox)
+    $main.appendChild(Fragment)
 }
