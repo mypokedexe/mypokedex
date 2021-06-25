@@ -1,5 +1,6 @@
 @import "../resources-sass/normalize";
 @import "../resources-sass/variables";
+@import "../resources-sass/mixin";
 body{
     font-family:'Roboto',sans-serif;
     background:$color-three;
@@ -58,6 +59,7 @@ main{
         position: relative;
         display:flex;
         justify-content: center;
+        background:red;
         .pokemon__image{
             width: 53px;
             height: 63px;
@@ -117,6 +119,15 @@ main{
         text-overflow: ellipsis;
         overflow: hidden;
         width: 25px;
+    }
+    .pokemon__click{
+        background:transparent;
+        z-index:500;
+        position: absolute;
+        bottom: 0;
+        top:0;
+        left:0;
+        right:0;
     }
 }
 @media screen and (min-width:500px){
@@ -218,3 +229,4 @@ main{
         }
     }
 }
+@include pokemon-active;
