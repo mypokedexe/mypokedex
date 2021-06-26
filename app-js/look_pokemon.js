@@ -62,4 +62,28 @@ export const LookPokemon = (SkillsDescription )=>{
 
     $pokemonImage.src = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_006_00.png'
     $pokemonNameActive.textContent = 'Charmander'
+
+    
+    $pokemonBoxActive.classList.add('pokemon__box__active')
+    // $pokemonBoxActive.classList.add('pokemon__box__active__enabled')
+    $arrowActive.classList.add('fas','fa-arrow-left','arrow__active')
+    $pokemonImage.classList.add('pokemon__image__active')    
+    $pokemonImageShadow.classList.add('shadow__image')
+    $pokemonActive.classList.add('pokemon__active')
+    $pokemonNameBoxActive.classList.add('pokemon__name__box__active')
+    $pokemonNameActive.classList.add('pokemon__name__active')
+    $pokemonDescriptionActive.classList.add('pokemon__description__active')
+    $pokemonListDescription.classList.add('pokemon__list__description')
+
+    $pokemonBoxActive.appendChild($arrowActive)
+    $pokemonBoxActive.appendChild($pokemonImage)
+    $pokemonBoxActive.appendChild($pokemonImageShadow)
+    $pokemonActive.appendChild($pokemonNameBoxActive)
+    $pokemonNameBoxActive.appendChild($pokemonNameActive)
+    $pokemonActive.appendChild($pokemonDescriptionActive)
+    $pokemonDescriptionActive.appendChild($pokemonListDescription)
+    $pokemonBoxActive.appendChild($pokemonActive)
+    Fragment.appendChild($pokemonBoxActive)
+    body.appendChild(Fragment)
+
 }
