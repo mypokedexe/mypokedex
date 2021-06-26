@@ -65,7 +65,7 @@ export const LookPokemon = (SkillsDescription )=>{
 
     
     $pokemonBoxActive.classList.add('pokemon__box__active')
-    // $pokemonBoxActive.classList.add('pokemon__box__active__enabled')
+    $pokemonBoxActive.classList.add('pokemon__box__active__enabled')
     $arrowActive.classList.add('fas','fa-arrow-left','arrow__active')
     $pokemonImage.classList.add('pokemon__image__active')    
     $pokemonImageShadow.classList.add('shadow__image')
