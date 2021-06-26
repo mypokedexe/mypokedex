@@ -1,5 +1,5 @@
 export const LookPokemon = (SkillsDescription )=>{
-    let {Altura,Categoria,Peso,Habilidad,Sexo,Tipo} = SkillsDescription
+    let {name,imageUrl,Altura,Categoria,Peso,Habilidad,Sexo,Tipo} = SkillsDescription
     const body = document.querySelector('body') 
     const Fragment = document.createDocumentFragment()
     const $pokemonBoxActive = document.createElement('section')
@@ -60,8 +60,8 @@ export const LookPokemon = (SkillsDescription )=>{
         $pokemonListDescription.appendChild($pokemonListDescriptionItem)
     });
 
-    $pokemonImage.src = 'https://raw.githubusercontent.com/PokeMiners/pogo_assets/master/Images/Pokemon/pokemon_icon_006_00.png'
-    $pokemonNameActive.textContent = 'Charmander'
+    $pokemonImage.src = imageUrl
+    $pokemonNameActive.textContent = name
 
     
     $pokemonBoxActive.classList.add('pokemon__box__active')
@@ -86,4 +86,25 @@ export const LookPokemon = (SkillsDescription )=>{
     Fragment.appendChild($pokemonBoxActive)
     body.appendChild(Fragment)
 
+    const $ItemType = document.querySelectorAll('.pokemon__list__description__item')
+
+    let TypeOne = Tipo[0] 
+    let TypeTwo= Tipo[1]
+    let Types =  []
+    Types.push(TypeOne,TypeTwo)
+
+    const $pokemonType = document.createElement('article')
+    $pokemonType.classList.add('pokemon__type')
+    Types.forEach((el)=>{
+        const $pokemonTypeBox = document.createElement('div')
+        const $pokemonTypeText = document.createElement('p')
+        $pokemonTypeText.textContent = el
+
+        $pokemonTypeBox.classList.add('pokemon__type__box')
+        $pokemonTypeText.classList.add('pokemon__type__text')
+        $pokemonTypeBox.appendChild($pokemonTypeText)
+        $pokemonType.appendChild($pokemonTypeBox)
+    })
+
+    $ItemType[6].appendChild($pokemonType)
 }
