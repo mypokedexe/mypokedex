@@ -10,7 +10,7 @@ const GetAllPokemons = async (url)=>{
         let json =await res.json()
 
         if(!res.ok) throw res
-        
+
         let $template = ''
 
         for (let i = 0; i < json.results.length; i++) {
@@ -58,3 +58,12 @@ const GetAllPokemons = async (url)=>{
     }
 }
 document.addEventListener('DOMContentLoaded',(e)=>GetAllPokemons(endpoinOne))
+document.addEventListener('click',(e)=>{
+    if(e.target.matches('.arrow')){
+        e.preventDefault()
+        if(e.target.dataset.link === ''){
+        }else{
+            GetAllPokemons(e.target.dataset.link)
+        }
+    }
+})
