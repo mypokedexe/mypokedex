@@ -38,7 +38,7 @@ const GetAllPokemons = async (url)=>{
 
                                 </section>
 
-                                <section class="pokemon__click" data-pokemon="${pokemon.name}"></section>
+                                <section class="pokemon__click" data-pokemon="${pokemon.name}" data-id="${pokemon.id}" ></section>
 
                             </section>
                 `
