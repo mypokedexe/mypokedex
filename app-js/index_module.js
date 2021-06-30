@@ -1,4 +1,4 @@
-import { LookPokemon } from "./look_pokemon.js";
+import { SearchPokemon } from "./search_pokemon.js";
 let $next  = document.querySelector('#arrow-rigth')
 let $previous  = document.querySelector('#arrow-left')
 let endpoinOne = 'https://pokeapi.co/api/v2/pokemon/'
@@ -57,7 +57,10 @@ const GetAllPokemons = async (url)=>{
     } catch (err) {
     }
 }
-document.addEventListener('DOMContentLoaded',(e)=>GetAllPokemons(endpoinOne))
+document.addEventListener('DOMContentLoaded',(e)=>{
+    GetAllPokemons(endpoinOne)
+    SearchPokemon()
+})
 document.addEventListener('click',async(e)=>{
     if(e.target.matches('.arrow')){
         e.preventDefault()
