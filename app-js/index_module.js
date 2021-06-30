@@ -58,7 +58,7 @@ const GetAllPokemons = async (url)=>{
     }
 }
 document.addEventListener('DOMContentLoaded',(e)=>GetAllPokemons(endpoinOne))
-document.addEventListener('click',(e)=>{
+document.addEventListener('click',async(e)=>{
     if(e.target.matches('.arrow')){
         e.preventDefault()
         if(e.target.dataset.link === ''){
@@ -66,4 +66,17 @@ document.addEventListener('click',(e)=>{
             GetAllPokemons(e.target.dataset.link)
         }
     }
+    if(e.target.matches('.pokemon__click')){
+
+        try {
+            let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${e.target.dataset.id}/`)
+            let json = await res.json()
+
+            if(!res.ok) throw res
+            
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    
 })
