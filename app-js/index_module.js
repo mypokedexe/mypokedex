@@ -138,10 +138,13 @@ document.addEventListener('click',async(e)=>{
             lookPokemon.innerHTML = $templateTwo
             let boxPokemon = document.querySelector('.pokemon__box__active')
             boxPokemon.classList.remove('pokemon__box__active__enabled')
-            
+
         } catch (err) {
             console.log(err);
         }
     }
-    
+    if(e.target.matches('.arrow__active')){
+        let boxPokemon = document.querySelector('.pokemon__box__active')
+        boxPokemon.classList.add('pokemon__box__active__enabled')
+    }
 })
