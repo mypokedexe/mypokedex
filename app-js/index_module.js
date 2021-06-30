@@ -74,6 +74,11 @@ document.addEventListener('click',async(e)=>{
 
             if(!res.ok) throw res
             
+            let $templateTwo = ''
+            let alturaData = json.height / 10
+            let pesoData = json.weight / 10
+            let typeOne = json.types[0] === undefined ? ' ' :  json.types[0].type.name
+            let typeTwo = json.types[1] === undefined ? ' ' :  json.types[1].type.name
         } catch (err) {
             console.log(err);
         }
