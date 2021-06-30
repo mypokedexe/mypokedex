@@ -82,4 +82,10 @@ export const SearchPokemon =( )=>{
             e.preventDefault()
         }
     })
+    document.addEventListener('keydown',(e)=>{
+        if(e.target === $FORM.search && e.key === 'Enter'){
+            let $pokemonName = $FORM.search.value.toLowerCase()            
+            InserPokemon(`https://pokeapi.co/api/v2/pokemon/${$pokemonName}/`)
+        }
+    })
 }
