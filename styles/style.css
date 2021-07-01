@@ -924,3 +924,119 @@ main .pokemon__click {
     grid-template-columns: repeat(1, auto);
   }
 }
+.error__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+.error__text {
+  padding: 0 3rem 0 0;
+}
+
+.error__image {
+  width: 245px;
+  height: 175px;
+}
+
+@media screen and (min-width: 1000px) {
+  .error__text {
+    padding: 0 0 3rem 0;
+    font-size: 35px;
+  }
+}
+.error__seach__box {
+  display: none;
+}
+
+.error__search__box__enabled {
+  display: relative;
+  background: rgba(0, 0, 0, 0.445);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 888;
+}
+.error__search__box__enabled .error__search__message__box {
+  background: white;
+  position: absolute;
+  top: 35%;
+  left: 1rem;
+  border-radius: 15px;
+  width: 126px;
+  height: 137px;
+  font-weight: 700;
+  padding: 0 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.error__search__box__enabled .error__search__arrow {
+  color: white;
+  position: absolute;
+  bottom: 95%;
+  right: 40%;
+  font-size: 30px;
+  -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+}
+.error__search__box__enabled .error__search__message__button {
+  border: 2px solid black;
+  height: 21px;
+  width: 76px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.274);
+          box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.274);
+}
+.error__search__box__enabled .button__ok__search__animation {
+  -webkit-box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.274);
+          box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.274);
+}
+.error__search__box__enabled .error__search__message__button__text {
+  margin: 0;
+}
+
+@media screen and (min-width: 500px) {
+  .error__search__box .error__search__message__box {
+    left: 10rem;
+  }
+}
+@media screen and (min-width: 1000px) {
+  .error__search__box .error__search__message__box {
+    top: 40%;
+    left: 35%;
+  }
+}
