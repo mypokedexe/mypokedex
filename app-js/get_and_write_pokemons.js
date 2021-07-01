@@ -10,6 +10,15 @@ export const GetAllPokemons = async (url)=>{
 
         if(!res.ok) throw res
 
+        $main.innerHTML = `
+            <div class="poinst__container">
+                <div class="point point-1"></div>
+                <div class="point point-2"></div>
+                <div class="point point-3"></div>
+                <div class="point point-4"></div>
+                <div class="point point-5"></div>
+            </div>
+        `
         let $template = ''
 
         for (let i = 0; i < json.results.length; i++) {
