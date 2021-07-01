@@ -270,3 +270,60 @@
     }
     
 }
+@mixin  pikachu-loader {
+$image: "../resources/images/pokeballs/pokeball-loader-one.png","../resources/images/pokeballs/pokeball-loader-two.png", "../resources/images/pokeballs/pokeball-loader-trhee.png", "../resources/images/pokeballs/pokeball-loader-four.png", "../resources/images/pokeballs/pokeball-loader-five.png"; 
+$color: #FF1C1C, #EFDC74, #04A0BA, #41A84F, #09A7A7;
+
+.poinst__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+$circle-size: 20px;
+$circle-margin: 7px; 
+
+.point {
+  width: $circle-size;
+  height: $circle-size;
+  border-radius: 50%;
+  margin: $circle-margin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:before {
+    content: "";
+    width: $circle-size;
+    height: $circle-size;
+    border-radius: 50%;
+    opacity: 0.7;
+    animation: scale 2s infinite 
+      cubic-bezier(0, 0, 0.49, 1.02);
+  }
+}
+
+@for $i from 1 through 5 {
+  .point-#{$i} {
+    background:url(nth($image, $i)) ;
+    background-size: 100%;
+    &:before {
+      background: nth($color, $i);
+      animation-delay: 200ms * $i;
+    }
+  }
+}
+
+@keyframes scale {
+  0% {
+    transform: scale(1);
+  }
+  50%, 75% {
+    transform: scale(2.5);
+  }
+  78%, 100% {
+    opacity: 0;
+  }
+}
+}
