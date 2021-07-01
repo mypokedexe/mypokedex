@@ -1,3 +1,4 @@
+import { ErrorFuntionSearch } from "./error.js";
 export const SearchPokemon =( )=>{
     const $FORM = document.querySelector('form') 
     const InserPokemon = async (endPoint)=>{
@@ -73,7 +74,7 @@ export const SearchPokemon =( )=>{
             let boxPokemon = document.querySelector('.pokemon__box__active')
             boxPokemon.classList.remove('pokemon__box__active__enabled')
         } catch (err) {
-            console.log(err);
+            ErrorFuntionSearch()            
         }
     }
     

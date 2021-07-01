@@ -1,3 +1,4 @@
+import { ErrorFuntion } from "./error.js";
 let $next  = document.querySelector('#arrow-rigth')
 let $previous  = document.querySelector('#arrow-left')
 let $main = document.querySelector('main')
@@ -42,7 +43,10 @@ export const GetAllPokemons = async (url)=>{
                 `
                 if(!res.ok)throw res
             } catch (err) {
-                console.log(`${err.status} Ocurrio un Error`);
+                ErrorFuntion({
+                    error_number:err.status,
+                    error_text:err.statusText
+                })
             }
         }
 
@@ -53,7 +57,10 @@ export const GetAllPokemons = async (url)=>{
         $next.dataset.link = next
         $previous.dataset.link = previous
     } catch (err) {
-        console.log(err);
+        ErrorFuntion({
+            error_number:err.status,
+            error_text:err.statusText
+        })
     }
 }
 export const FuntionActiveAll = ()=>{
@@ -139,7 +146,10 @@ export const FuntionActiveAll = ()=>{
                 boxPokemon.classList.remove('pokemon__box__active__enabled')
     
             } catch (err) {
-                console.log(err);
+                ErrorFuntion({
+                    error_number:err.status,
+                    error_text:err.statusText
+                })
             }
         }
         if(e.target.matches('.arrow__active')){
