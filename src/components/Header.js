@@ -26,14 +26,15 @@ const Header = () =>{
     $HeaderLogoBox.appendChild($HeaderLogoImage)
     $Header.appendChild($HeaderLogoBox)
     $HeaderForm.appendChild($HeaderFormSearch)
-    $HeaderFormBox.appendChild($HeaderForm)
     $HeaderPaginationIcons.forEach((el)=>{
         const $HeaderPaginationLink = document.createElement('a')
         $HeaderPaginationLink.classList.add('pagination__link')
         $HeaderPaginationLink.innerHTML = el        
+        $HeaderPaginationLink.href = '#'
         $HeaderPaginationIconsBox.appendChild($HeaderPaginationLink)
     })
     $HeaderFormBox.appendChild($HeaderPaginationIconsBox)
+    $HeaderFormBox.appendChild($HeaderForm)
     $Header.appendChild($HeaderFormBox)
     return $Header
 }
