@@ -6,6 +6,7 @@ const App = async ()=>{
     $loader.innerHTML=`<img src="public/oval.svg" alt="loader" class="loader__image">`
     $loader.classList.add('loader')
     $DynamicContent.id = 'dynamic-content' 
+    $ROOT.innerHTML = ''
     $ROOT.appendChild($loader)
     $ROOT.appendChild($DynamicContent)
     await Router()
