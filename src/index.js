@@ -7,7 +7,7 @@ document.addEventListener('click',async(e)=>{
     if(e.target.matches('.pokemon__see')){
         location.hash = `#/pokemon/${e.target.dataset.name}`
     }
-     if(e.target.matches('.pagination__link')||e.target.matches('.pagination__icon')){
+    if(e.target.matches('.pagination__link')||e.target.matches('.pagination__icon')){
         e.preventDefault()
         const $DynamicContent = document.getElementById('dynamic-content')
         const $LoaderPokemon = document.createElement('div')
@@ -18,5 +18,8 @@ document.addEventListener('click',async(e)=>{
             $DynamicContent.appendChild(await GetPokemons(e.target.dataset.link))
             $DynamicContent.removeChild($LoaderPokemon)
         }
+    }
+    if(e.target.matches('.back-pokemon-icon')){
+        location.hash = '#/home'
     }
 })
