@@ -11,6 +11,13 @@ body{
     font-family: 'Roboto',sans-serif;
     background: var(--color-three);
 }
+body::-webkit-scrollbar{
+  width: 8px;
+}
+body::-webkit-scrollbar-thumb{
+  background:var(--color-gradient);
+  border-radius: 8px;
+}
 .header__logo__box{
     padding:1rem;
     display: flex;
