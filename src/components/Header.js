@@ -11,6 +11,7 @@ const Header = () =>{
  
     $HeaderFormSearch.type = 'search'
     $HeaderFormSearch.placeholder = 'Buscar Pokémon'
+    $HeaderFormSearch.name = 'pokemon-name'
     $HeaderLogoPokeball.src = 'public/pokeball-one.png'
     $HeaderLogoImage.src = 'public/pokedex-logo.png'
 
