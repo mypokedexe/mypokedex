@@ -23,3 +23,10 @@ document.addEventListener('click',async(e)=>{
         location.hash = '#/home'
     }
 })
+document.addEventListener('submit',(e)=>{
+    if(e.target.matches('form')){
+        e.preventDefault()
+        location.hash = `#/pokemon/${e.target['pokemon-name'].value.toLowerCase()}` 
+
+    }
+})
