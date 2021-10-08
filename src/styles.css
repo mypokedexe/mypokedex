@@ -57,3 +57,60 @@ form{
     font-size:25px;
     cursor: pointer;
 }
+.pokemons__box{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap:1rem;
+    padding:3rem 10px 1rem 10px;
+}
+.pokemon__box{
+    padding:1rem 0 0 0 ;
+    position: relative;
+}
+.pokemon{
+    background: var(--color-gradient);
+    position: relative;
+    padding:2.5rem 0.625rem 1rem 0.625rem ;
+    border-radius:10px;
+}
+.pokemon__name{
+    margin:0;
+    font-weight:500;
+    font-size:16px;
+    background:white;
+    margin:25px 0 10px 0;
+    text-align: center;
+    padding:2px 0;
+    border-radius: 5px;
+}
+.pokemon__name::first-letter{
+    text-transform: uppercase;
+}
+.pokemon__type{
+    margin:0;
+    font-weight:500;
+}
+.pokemon__number{
+    margin:0;
+    font-weight:500;
+}
+.pokemon__image{
+    position: absolute;
+    bottom:55%;
+}
+.pokemon>div{
+    background:#F4F4F4;
+    display:flex;
+    justify-content: space-between;
+    padding:5px;
+    border-radius: 5px;
+}
+.pokemon__see{
+    background:transparent;
+    position: absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    cursor: pointer;
+}
