@@ -124,6 +124,7 @@ form{
     display:flex;
     justify-content: center;
     align-items: center;
+    z-index:999;
 }
 .loader>img{
     width:20%;
@@ -351,4 +352,7 @@ form{
 }
 .only__pokemon__name::first-letter{
   text-transform: uppercase;
+}
+.pagination__icon{
+  color:black;
 }
