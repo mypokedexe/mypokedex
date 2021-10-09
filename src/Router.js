@@ -1,3 +1,4 @@
+import Error from "./components/Error.js"
 import Header from "./components/Header.js"
 import GetPokemon from "./helpers/get_pokemon.js"
 import GetPokemons from "./helpers/get_pokemons.js"
@@ -11,7 +12,7 @@ const Router =async ()=>{
     }else if(hash.includes('#/pokemon')){
         $DynamicContent.appendChild(await GetPokemon())        
     }else{
-        // erro page 404
+        $DynamicContent.appendChild(Error({status:404,msg:'Lo siento ocurrio un error'}))
     }
 }
 export default Router

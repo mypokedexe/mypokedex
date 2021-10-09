@@ -1,3 +1,4 @@
+import Error from "../components/Error.js"
 import Pokemons from "../components/Pokemons.js"
 const GetPokemons = async(url)=>{
     try {
@@ -20,8 +21,7 @@ const GetPokemons = async(url)=>{
                     type:json.types[0].type.name
                 }))
             } catch (err) {
-                console.log(err)
-                // error al recuperar los pokemons
+                $PokemonBox.appendChild(Error({status:err,msg:'Lo siento hubo un error al recuperar los pokemones'}))
             }
         }
         let next = document.querySelector('.fa-arrow-right')
@@ -32,8 +32,7 @@ const GetPokemons = async(url)=>{
 
         return $PokemonBox
     } catch (err) {
-        console.log(err)
-        // error al recuperar los pokemons
+        $PokemonBox.appendChild(Error({status:err,msg:'Lo siento hubo un error al recuperar los pokemones'}))
     }
 }
 export default GetPokemons

@@ -1,8 +1,9 @@
+import Error from "../components/Error.js"
 import Pokemon from "../components/Pokemon.js"
 const GetPokemon =async ()=>{
+    const $PokemonBox = document.createElement('section')
     try {
         let pokemonGet = location.hash.substring(10) 
-        const $PokemonBox = document.createElement('section')
         const $Back = document.createElement('i')
         $PokemonBox.classList.add('only-pokemon-box')
         $Back.classList.add('back-pokemon-icon','fas','fa-arrow-left')
@@ -27,9 +28,10 @@ const GetPokemon =async ()=>{
             type:json.types,
         }))
 
-        return $PokemonBox
     } catch (err) {
-        // errro al recuperar el pokemon 
+        $PokemonBox.appendChild(Error({status:err,msg:'Lo siento hubo un error al recuperar el pokemon'}))
     }
+    return $PokemonBox
+
 }
 export default GetPokemon
