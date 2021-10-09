@@ -4,6 +4,7 @@ const GetPokemon =async ()=>{
         let pokemonGet = location.hash.substring(10) 
         const $PokemonBox = document.createElement('section')
         const $Back = document.createElement('i')
+        $PokemonBox.classList.add('only-pokemon-box')
         $Back.classList.add('back-pokemon-icon','fas','fa-arrow-left')
         let res = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonGet}`)
         if(!res.ok)throw res.status
